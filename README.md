@@ -1,7 +1,6 @@
 # what's-Low?
 
-![1_AjesIvV-kkwk6LLvNf1t4A](https://github.com/user-attachments/assets/ae8ef98b-d052-4bc7-bd32-ce8c9000b2aa)
-
+![1_a-HMmQFQNC76zCZBZfFgJg](https://github.com/user-attachments/assets/420c996b-3ba5-44a5-862c-e8ff72837bb9)
 
 In many homes, when one person uses something—like food or drinks—they sometimes forget to tell others. This can lead to surprises when someone goes to get a snack and finds out it’s all gone! This can cause several problems, such as:
 
