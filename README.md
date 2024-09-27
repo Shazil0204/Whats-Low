@@ -1,4 +1,4 @@
-# what's-Low?
+# What's-Low? -- App Name
 
 ![1_a-HMmQFQNC76zCZBZfFgJg](https://github.com/user-attachments/assets/420c996b-3ba5-44a5-862c-e8ff72837bb9)
 
