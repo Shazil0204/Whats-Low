@@ -13,3 +13,5 @@ To solve these issues, we’re creating **What’s Low?**, a family app designed
 ## Documentation
 
 For more details, please refer to the [View Documentation](https://docs.google.com/document/d/1CZR3cwgvdB0YfuA5000Exac_xKKUSBYKWnUtGpgftxc/edit?usp=sharing).
+
+You can also check out my [WIREFRAMES](https://www.figma.com/design/86ZWdMXfQwfh8TfBsQPRgC/What's-Low---Wireframe?m=auto&t=zqQJiviwBuGStogi-1) for more information
