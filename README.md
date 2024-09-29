@@ -15,3 +15,5 @@ To solve these issues, we’re creating **What’s Low?**, a family app designed
 For more details, please refer to the [View Documentation](https://docs.google.com/document/d/1CZR3cwgvdB0YfuA5000Exac_xKKUSBYKWnUtGpgftxc/edit?usp=sharing).
 
 You can also check out my [WIREFRAMES](https://www.figma.com/design/86ZWdMXfQwfh8TfBsQPRgC/What's-Low---Wireframe?m=auto&t=zqQJiviwBuGStogi-1) for more information
+
+Wireframes are using components in figma so it won't be hard to remake them but for now they have both function for buttons and comments. I have completed the (tabs) and now working on (auth). Additional features will be added later on
