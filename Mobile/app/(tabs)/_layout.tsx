@@ -11,7 +11,6 @@ const FrontTabLayout = () => {
 
   return (
     <View style={styles.mainView}>
-      <Header />
       <Tabs
         screenOptions={{ headerShown: false }}
         tabBar={(props) => <TabBar {...props} />}
