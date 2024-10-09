@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Tabs } from "expo-router";
 import TabBar from "../../components/Tab-Bar-component/tabbar";
 import { StatusBar, StyleSheet, View } from "react-native";
+import Header from "../../components/Header/header";
 
 const FrontTabLayout = () => {
   useEffect(() => {
@@ -10,6 +11,7 @@ const FrontTabLayout = () => {
 
   return (
     <View style={styles.mainView}>
+      <Header />
       <Tabs
         screenOptions={{ headerShown: false }}
         tabBar={(props) => <TabBar {...props} />}
