@@ -30,6 +30,6 @@ export default FrontTabLayout;
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
-    backgroundColor: "#001F3F",
+    backgroundColor: "#0c0e16",
   },
 });
