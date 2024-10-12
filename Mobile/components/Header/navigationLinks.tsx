@@ -11,11 +11,11 @@ const HeaderNavigationLink = () => {
       segments[1] === "team" ||
       segments[1] === "setting" ? (
         <Link href="/(tabs)/">
-          <Ionicons name="return-up-back-outline" size={60} color="white" />
+          <Ionicons name="return-up-back-outline" size={60} color="black" />
         </Link>
       ) : (
         <Link href="/(auth)/profile">
-          <Ionicons name="person-circle-outline" size={60} color="white" />
+          <Ionicons name="person-circle-outline" size={60} color="black" />
         </Link>
       )}
     </View>

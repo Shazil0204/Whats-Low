@@ -6,7 +6,7 @@ import Header from "../../components/Header/header";
 
 const FrontTabLayout = () => {
   useEffect(() => {
-    StatusBar.setBarStyle("light-content");
+    StatusBar.setBarStyle("dark-content");
   }, []);
 
   return (
@@ -30,6 +30,7 @@ export default FrontTabLayout;
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
-    backgroundColor: "#0c0e16",
+    position: "relative", // Ensure absolute positioning works relative to this container
+    backgroundColor: "#aaf0c4",
   },
 });

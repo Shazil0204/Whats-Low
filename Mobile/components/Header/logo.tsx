@@ -23,7 +23,7 @@ const Logo = () => {
   return (
     <View>
       <Text style={styles.logoText}>
-        <Link href="/(tabs)/">What's Low </Link>
+        <Link href="/(tabs)/">What's Low? </Link>
       </Text>
     </View>
   );
@@ -38,5 +38,11 @@ const styles = StyleSheet.create({
     padding: 20,
     fontFamily: "Caveat-Bold",
     transform: [{ rotate: "-5deg" }],
+    textShadowColor: "black",
+    textShadowRadius: 1,
+    textShadowOffset: {
+      width: 2,
+      height: 2,
+    },
   },
 });
