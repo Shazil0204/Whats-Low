@@ -28,7 +28,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#101828",
+    backgroundColor: "#eaeaea",
   },
   content: {
     flexDirection: "row",
@@ -36,5 +36,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between", // Ensures space between items
     padding: 20,
     paddingBottom: 100,
+    gap: 20,
   },
 });

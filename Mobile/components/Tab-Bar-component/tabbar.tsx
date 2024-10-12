@@ -113,5 +113,14 @@ const styles = StyleSheet.create({
   },
   iconIsFocused: {
     position: "absolute",
+    bottom: 20,
+    backgroundColor: "#fff",
+    borderRadius: 25,
+    padding: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
 });

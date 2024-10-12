@@ -12,9 +12,6 @@ const TabIcon: React.FC<TabIconProps> = ({ isFocused, routeName }) => {
     case "index":
       iconName = isFocused ? "home" : "home-outline";
       break;
-    case "gallery":
-      iconName = isFocused ? "images" : "images-outline";
-      break;
     case "create":
       iconName = isFocused ? "add-circle" : "add-circle-outline";
       break;
@@ -39,7 +36,7 @@ const TabIcon: React.FC<TabIconProps> = ({ isFocused, routeName }) => {
     <Ionicons
       name={iconName}
       size={isFocused ? 40 : 24}
-      color={isFocused ? "#001F3F" : "white"}
+      color={isFocused ? "#003366" : "white"}
     />
   );
 };

@@ -15,9 +15,7 @@ export default ImageComponent;
 
 const styles = StyleSheet.create({
   image: {
-    width: "100%", // Full width of the container
+    width: "48%", // Full width of the container
     height: 150, // Set the height as needed
-    borderRadius: 10, // Optional: round the image corners
-    marginBottom: 10, // Space between image and description
   },
 });

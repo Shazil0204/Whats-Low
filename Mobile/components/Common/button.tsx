@@ -22,6 +22,7 @@ export default ButtonComponent;
 
 const styles = StyleSheet.create({
   button: {
+    width: "70%",
     backgroundColor: "#007BFF", // Button background color
     paddingVertical: 10,
     paddingHorizontal: 20,

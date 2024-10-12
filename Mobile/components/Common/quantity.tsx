@@ -14,7 +14,7 @@ export default QuantityComponent;
 
 const styles = StyleSheet.create({
   quantity: {
-    color: "#fff", // Color for quantity text
-    fontSize: 16, // Increase font size for better visibility
+    color: "black",
+    fontSize: 16,
   },
 });

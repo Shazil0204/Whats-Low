@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const Gallery = () => {
+const SelectionBar = () => {
   return (
     <View>
-      <Text>Gallery</Text>
+      <Text>SelectionBar</Text>
     </View>
   );
 };
 
-export default Gallery;
+export default SelectionBar;
 
 const styles = StyleSheet.create({});
