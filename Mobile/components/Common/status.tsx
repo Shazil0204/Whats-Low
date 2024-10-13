@@ -10,13 +10,13 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
 
   switch (status) {
     case "Needed":
-      statusColor = "green";
+      statusColor = "#8BC34A";
       break;
     case "Urgent":
-      statusColor = "yellow";
+      statusColor = "#FFC107";
       break;
     case "Critical":
-      statusColor = "red";
+      statusColor = "#F44336";
       break;
     default:
       statusColor = "gray";
