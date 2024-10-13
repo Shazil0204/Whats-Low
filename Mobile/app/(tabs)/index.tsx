@@ -6,18 +6,14 @@ const Home = () => {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.content}>
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        <Item
+          itemStatus="Urgent"
+          itemUrl="https://i1.sndcdn.com/artworks-000494127912-y4jdnu-t1080x1080.jpg"
+          itemText="bread"
+          itemQuantity={99}
+          itemDescription="Nothing"
+          buttonTitle="Accept the task"
+        />
       </View>
     </ScrollView>
   );
