@@ -22,18 +22,21 @@ export default ButtonComponent;
 
 const styles = StyleSheet.create({
   button: {
-    width: "70%",
-    backgroundColor: "#007BFF", // Button background color
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    position: "absolute",
+    bottom: 1,
+    width: 185, // Fixed width, you can adjust this value
+    backgroundColor: "#007BFF",
+    paddingVertical: 10, // Padding for vertical space
     borderRadius: 5,
-    elevation: 3, // Adds shadow on Android
-    shadowColor: "#000", // Shadow color for iOS
-    shadowOffset: { width: 0, height: 2 }, // Shadow offset
-    shadowOpacity: 0.2, // Shadow opacity
-    shadowRadius: 3.5, // Shadow radius
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3.5,
+    alignSelf: "center", // Centers the button within its parent container
   },
   buttonText: {
-    color: "#fff", // Text color for button
+    color: "#fff",
+    textAlign: "center",
   },
 });
