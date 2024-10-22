@@ -3,37 +3,35 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import ImageComponent from "./image";
 import ButtonComponent from "./button";
-import QuantityComponent from "./quantity";
 import StatusComponent from "./status";
 
 interface ItemComponentProps {
+  id: number;
   status: "Required" | "HighPriority" | "Critical";
   url: string;
   label: string;
   quantity: number;
   description: string;
   addedBy: string;
-  dateAdded: Date;
   dueDate: Date;
   location: string;
 }
 
-const handleAddPress = () => {
-  // Handle button press logic here
-  console.log("Button pressed!");
-};
-
 const ItemComponent: React.FC<ItemComponentProps> = ({
+  id,
   status,
   url,
   label,
   quantity,
   description,
   addedBy,
-  dateAdded,
   dueDate,
   location,
 }) => {
+  const handleAddPress = () => {
+    console.log("item id: ", id);
+  };
+
   return (
     <View
       style={{
@@ -43,76 +41,51 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
         borderRadius: 25,
         position: "relative",
         padding: 20,
-        backgroundColor: "#9BF272",
+        backgroundColor: "#fff",
         gap: 10,
       }}
     >
       <StatusComponent status={status} />
-
-      {/* this is for the top bar with title and add button */}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <Text
-          style={{
-            fontSize: 50,
-            minWidth: "80%",
-            maxWidth: "80%",
-            fontWeight: "900",
-          }}
-        >
-          {label}
-        </Text>
+      <ButtonComponent onPress={handleAddPress} />
+      <Text style={{ fontWeight: "800", fontSize: 40 }}>{label}</Text>
+      <ImageComponent
+        source={{ uri: url }}
+        style={{ borderRadius: 10 }} // Optional additional styling
+      />
+      <Text style={{ width: "100%", fontWeight: "300", fontSize: 25 }}>
+        {description}
+      </Text>
+      <View style={{ gap: 20 }}>
         <View
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            flexDirection: "row",
+            gap: 2,
           }}
         >
-          <ButtonComponent onPress={handleAddPress} />
+          <View style={{ width: "70%" }}>
+            <Text style={{ fontWeight: "800", fontSize: 20 }}>Added by</Text>
+            <Text style={{ fontWeight: "800", fontSize: 40 }}>{addedBy}</Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "800", fontSize: 20 }}>Location</Text>
+            <Text style={{ fontWeight: "800", fontSize: 40 }}>{location}</Text>
+          </View>
         </View>
-      </View>
-
-      {/* this is for the descripton */}
-      <View style={{ width: "100%" }}>
-        <Text style={{ fontSize: 20, fontWeight: "300" }}>{description}</Text>
-      </View>
-
-      {/* this is for the images and all other info */}
-      <View style={{ flexDirection: "row", gap: 10 }}>
-        {/* This is the Image component */}
-        <ImageComponent
-          source={{
-            uri: url,
+        <View
+          style={{
+            flexDirection: "row",
+            gap: 2,
           }}
-        />
-        {/* this is all the information */}
-        <View style={{ maxWidth: "28%", gap: 20 }}>
-          {/* <Text style={{ fontSize: 40, fontWeight: "700" }}>{addedBy}</Text> */}
-          <View>
-            <Text style={{ fontSize: 20, fontWeight: "500" }}>Quantity</Text>
-            <Text style={{ fontSize: 40, fontWeight: "700" }}>{quantity}</Text>
-          </View>
-          <View>
-            <Text style={{ fontSize: 20, fontWeight: "500" }}>location</Text>
-            <Text style={{ fontSize: 40, fontWeight: "700" }}>{location}</Text>
-          </View>
-
-          <View>
-            <Text style={{ fontSize: 20, fontWeight: "500" }}>Date Added </Text>
-            <Text style={{ fontSize: 23, fontWeight: "700" }}>
-              {dateAdded.toLocaleDateString()}
-            </Text>
-          </View>
-          <View>
-            <Text style={{ fontSize: 20, fontWeight: "500" }}>Due Date </Text>
-            <Text style={{ fontSize: 23, fontWeight: "700" }}>
+        >
+          <View style={{ width: "70%" }}>
+            <Text style={{ fontWeight: "800", fontSize: 20 }}>Due Date</Text>
+            <Text style={{ fontWeight: "800", fontSize: 40 }}>
               {dueDate.toLocaleDateString()}
             </Text>
+          </View>
+          <View>
+            <Text style={{ fontWeight: "800", fontSize: 20 }}>Quantity</Text>
+            <Text style={{ fontWeight: "800", fontSize: 40 }}>{quantity}</Text>
           </View>
         </View>
       </View>
@@ -121,20 +94,3 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
 };
 
 export default ItemComponent;
-
-const styles = StyleSheet.create({
-  itemContainer: {
-    width: "100%",
-    padding: 5,
-    backgroundColor: "#9bf272",
-    display: "flex",
-    flexDirection: "row",
-    gap: 5,
-    position: "relative",
-    borderRadius: 10,
-  },
-  scrollViewStyle: {
-    maxHeight: 50,
-    maxWidth: "70%",
-  },
-});
