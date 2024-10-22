@@ -8,7 +8,7 @@ const Home = () => {
       <View style={styles.content}>
         <Item
           itemStatus="Urgent"
-          itemUrl="https://i1.sndcdn.com/artworks-000494127912-y4jdnu-t1080x1080.jpg"
+          itemUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXxZR0_1ISIJx_T4oB5-5OJVSNgSMFLe8eCw&s"
           itemText="bread"
           itemQuantity={99}
           itemDescription="Nothing"
@@ -16,7 +16,7 @@ const Home = () => {
         />
         <Item
           itemStatus="Urgent"
-          itemUrl="https://i1.sndcdn.com/artworks-000494127912-y4jdnu-t1080x1080.jpg"
+          itemUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXxZR0_1ISIJx_T4oB5-5OJVSNgSMFLe8eCw&s"
           itemText="bread"
           itemQuantity={99}
           itemDescription="Nothing"
@@ -24,7 +24,7 @@ const Home = () => {
         />
         <Item
           itemStatus="Urgent"
-          itemUrl="https://i1.sndcdn.com/artworks-000494127912-y4jdnu-t1080x1080.jpg"
+          itemUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXxZR0_1ISIJx_T4oB5-5OJVSNgSMFLe8eCw&s"
           itemText="bread"
           itemQuantity={99}
           itemDescription="Nothing"
@@ -40,7 +40,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#eaeaea",
+    backgroundColor: "#193940",
   },
   content: {
     flexDirection: "row",

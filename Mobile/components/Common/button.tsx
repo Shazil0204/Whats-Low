@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   button: {
     position: "absolute",
     bottom: 1,
-    width: 185, // Fixed width, you can adjust this value
+    width: "auto", // Fixed width, you can adjust this value
     backgroundColor: "#007BFF",
     paddingVertical: 10, // Padding for vertical space
     borderRadius: 5,

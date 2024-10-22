@@ -36,20 +36,13 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
           uri: itemUrl,
         }}
       />
-      <View style={{ gap: 5 }}>
+      <View style={{ maxWidth: "auto", gap: 5, position: "relative" }}>
         <Text>Name: {itemText}</Text>
         <QuantityComponent quantity={itemQuantity} />
-        <ScrollView
-          style={styles.scrollViewStyle}
-          showsVerticalScrollIndicator={false}
-          nestedScrollEnabled={true}
-        >
-          <Text>
-            hellohellohellohellohellohello hellohellohellohellohellohello
-            hellohellohellohellohellohello hellohellohellohellohellohello
-          </Text>
-        </ScrollView>
-        <ButtonComponent title={buttonTitle} onPress={handleAddPress} />
+        <Text style={{ borderColor: "black", borderWidth: 2 }}>hello</Text>
+        <View style={{ position: "absolute", bottom: 2, right: "50%" }}>
+          <ButtonComponent title={buttonTitle} onPress={handleAddPress} />
+        </View>
       </View>
     </View>
   );
@@ -61,7 +54,7 @@ const styles = StyleSheet.create({
   itemContainer: {
     width: "100%",
     padding: 5,
-    backgroundColor: "#fff",
+    backgroundColor: "#9bf272",
     display: "flex",
     flexDirection: "row",
     gap: 5,
