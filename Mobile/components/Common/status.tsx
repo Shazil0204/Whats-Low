@@ -25,14 +25,10 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
   return (
     <View
       style={{
-        position: "absolute",
-        top: -10,
-        left: -10,
-        height: 20,
-        width: 20,
+        height: 30,
+        width: 30,
         borderRadius: 25,
         backgroundColor: statusColor,
-        zIndex: 1,
         borderWidth: 1,
       }}
     />

@@ -1,24 +1,25 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import Item from "../../components/Common/item";
 import TestingItemStyling from "../../components/Common/testingItemStyling";
+import ItemComponent from "../../components/Common/item";
 
 const Home = () => {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.content}>
         <TestingItemStyling
-          status="Required"
-          url="https://digitalassets.sallinggroup.com/image/upload/e_trim:2/w_287,h_287,c_pad,dpr_2.0,ar_1,q_40,f_auto,b_white,e_sharpen:80/49ddb9806dd086b3bacdb65b24099a9b"
-          label="Bread"
+          status="Critical"
+          url="https://digitalassets.sallinggroup.com/image/upload/e_trim:2/e_sharpen:80,q_auto,f_auto,b_white,w_500/d70a98f5-599f-4599-94b2-0a6f4cbffbad"
+          label="Solsikkerugbrød"
           quantity={99}
-          description="description"
+          description="Det Gode Solsikke Rugbrød fra Schulstad er et saftigt brød med en mild og rund smag. Brødet er bagt med Schulstads egen rugsurdej, fintmalet rugmel og en god portion solsikkekerner"
           addedBy="John Doe"
           dateAdded={new Date()}
           dueDate={new Date("2024-12-31")}
           location="Bilka"
         />
       </View>
+      
     </ScrollView>
   );
 };

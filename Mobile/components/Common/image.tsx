@@ -1,26 +1,60 @@
-import React from "react";
-import { Image as RNImage, StyleSheet, ImageStyle } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Image, View, ImageStyle, StyleSheet } from "react-native";
 
 interface ImageComponentProps {
-  source: { uri: string }; // Define the type for the image source
-  style?: ImageStyle; // Optional additional styles
+  source: { uri: string };
+  style?: ImageStyle;
 }
 
 const ImageComponent: React.FC<ImageComponentProps> = ({ source, style }) => {
+  const [aspectRatio, setAspectRatio] = useState<number | null>(null);
+
+  useEffect(() => {
+    Image.getSize(
+      source.uri,
+      (width, height) => {
+        console.log(`Image dimensions: ${width}x${height}`); // Debugging line
+        setAspectRatio(width / height);
+      },
+      (error) => {
+        console.error("Failed to get image size:", error);
+      }
+    );
+  }, [source.uri]);
+
   return (
-    <RNImage
-      source={source}
-      style={[styles.image, style]}
-      resizeMode="contain"
-    />
+    <View
+      style={[styles.container, style, aspectRatio ? { aspectRatio } : null]}
+    >
+      {aspectRatio !== null ? (
+        <Image
+          source={source}
+          style={[styles.image, { aspectRatio }]} // Set the aspect ratio dynamically
+          resizeMode="contain"
+          onLoad={() => console.log("Image loaded")}
+          onError={(error) => console.error("Error loading image:", error)}
+        />
+      ) : (
+        <View style={styles.placeholder} />
+      )}
+    </View>
   );
 };
 
-export default ImageComponent;
-
 const styles = StyleSheet.create({
+  container: {
+    width: "100%", // Full width of the parent
+    backgroundColor: "lightgray", // Example background color for visibility
+  },
   image: {
-    width: "60%", // Full width of the container
-    height: "auto", // Set the height as needed
+    width: "100%",
+    height: undefined, // This allows the height to auto adjust
+  },
+  placeholder: {
+    width: "100%",
+    height: 200, // Placeholder height
+    backgroundColor: "transparent", // or any color you prefer
   },
 });
+
+export default ImageComponent;
