@@ -12,7 +12,6 @@ interface ItemComponentProps {
   itemText: string;
   itemQuantity: number;
   itemDescription: string;
-  buttonTitle: string;
 }
 
 const ItemComponent: React.FC<ItemComponentProps> = ({
@@ -21,7 +20,6 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
   itemText,
   itemQuantity,
   itemDescription,
-  buttonTitle,
 }) => {
   const handleAddPress = () => {
     // Handle button press logic here
@@ -30,7 +28,7 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
 
   return (
     <View style={styles.itemContainer}>
-      <StatusComponent status={itemStatus} />
+      {/* <StatusComponent status={itemStatus} /> */}
       <ImageComponent
         source={{
           uri: itemUrl,
@@ -41,7 +39,7 @@ const ItemComponent: React.FC<ItemComponentProps> = ({
         <QuantityComponent quantity={itemQuantity} />
         <Text style={{ borderColor: "black", borderWidth: 2 }}>hello</Text>
         <View style={{ position: "absolute", bottom: 2, right: "50%" }}>
-          <ButtonComponent title={buttonTitle} onPress={handleAddPress} />
+          <ButtonComponent onPress={handleAddPress} />
         </View>
       </View>
     </View>

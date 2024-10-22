@@ -2,17 +2,17 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 interface StatusComponentProps {
-  status: "Needed" | "Urgent" | "Critical";
+  status: "Required" | "HighPriority" | "Critical";
 }
 
 const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
   let statusColor: string;
 
   switch (status) {
-    case "Needed":
+    case "Required":
       statusColor = "#8BC34A";
       break;
-    case "Urgent":
+    case "HighPriority":
       statusColor = "#FFC107";
       break;
     case "Critical":
@@ -26,13 +26,14 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
     <View
       style={{
         position: "absolute",
-        top: -5,
-        left: -5,
+        top: -10,
+        left: -10,
         height: 20,
         width: 20,
         borderRadius: 25,
         backgroundColor: statusColor,
         zIndex: 1,
+        borderWidth: 1,
       }}
     />
   );
