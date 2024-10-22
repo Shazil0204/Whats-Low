@@ -26,8 +26,8 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
     <View
       style={{
         position: "absolute",
-        top: -10,
-        left: -10,
+        top: -5,
+        left: -5,
         height: 20,
         width: 20,
         borderRadius: 25,
