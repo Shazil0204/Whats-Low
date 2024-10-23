@@ -19,10 +19,10 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({ onPress }) => {
       }}
     >
       <Ionicons
-        name="checkmark-circle-outline"
+        name="thumbs-up-outline"
         size={40}
-        color="white"
-        backgroundColor="green"
+        color="black"
+        backgroundColor="#9BF272"
         style={{
           borderTopLeftRadius: 25,
           borderBottomRightRadius: 25,
