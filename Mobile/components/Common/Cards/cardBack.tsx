@@ -1,20 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const CardBack = () => {
+interface BackSideComponent {
+  onPressFlip: () => void;
+}
+
+const CardBack: React.FC<BackSideComponent> = ({ onPressFlip }) => {
   return (
     <View
       style={{
-        height: 200,
-        minWidth: "100%",
-        backgroundColor: "orange",
+        height: "100%",
+        width: "100%",
+        backgroundColor: "teal",
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 10,
-        position: "absolute",
       }}
     >
       <Text>CardBack</Text>
+      <Button title="See Details" onPress={onPressFlip} />
     </View>
   );
 };
