@@ -26,15 +26,22 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
     <View
       style={{
         position: "absolute",
-        top: -10,
-        left: -10,
+        top: -2,
+        right: -2,
         height: 30,
-        width: 30,
-        borderRadius: 25,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal: 10,
+        borderTopLeftRadius: 25,
+        borderBottomLeftRadius: 25,
+        borderTopRightRadius: 25,
         backgroundColor: statusColor,
         borderWidth: 1,
       }}
-    />
+    >
+      <Text style={{ textAlign: "center", color: "#fff" }}>{status}</Text>
+    </View>
   );
 };
 
