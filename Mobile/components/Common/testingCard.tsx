@@ -42,6 +42,7 @@ const testingCard = () => {
         tension: 10,
         useNativeDriver: true,
       }).start();
+      console.log("a");
     } else {
       Animated.spring(flipAnimation, {
         toValue: 180,
@@ -49,6 +50,7 @@ const testingCard = () => {
         tension: 10,
         useNativeDriver: true,
       }).start();
+      console.log("b");
     }
     setIsFlipped(!isFlipped);
   };

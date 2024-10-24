@@ -5,7 +5,7 @@ interface FrontSideComponent {
   onPressFlip: () => void;
 }
 
-const CardFront: React.FC<FrontSideComponent> = ({onPressFlip}) => {
+const CardFront: React.FC<FrontSideComponent> = ({ onPressFlip }) => {
   return (
     <View
       style={{
