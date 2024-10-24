@@ -1,6 +1,5 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import TestingItemStyling from "../../components/Common/testingItemStyling";
 import ItemComponent from "../../components/Common/item";
 
 const Home = () => {
