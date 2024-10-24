@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React, { useRef, useState } from "react";
 import CardFront from "./Cards/cardFront";
+import CardBack from "./Cards/cardBack";
 
 const testingCard = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -56,12 +57,10 @@ const testingCard = () => {
       <TouchableWithoutFeedback>
         <View style={styles.cardContainer}>
           <Animated.View style={[styles.front, styles.card, flipToFrontStyle]}>
-            {/* <Button title="Flip" onPress={flipCard} /> */}
-            <CardFront onPressFlip={flipCard}/>
+            <CardFront onPressFlip={flipCard} />
           </Animated.View>
           <Animated.View style={[styles.back, styles.card, flipToBackStyle]}>
-            <Text style={styles.text}>Back</Text>
-            <Button title="Flip" onPress={flipCard} />
+            <CardBack onPressFlip={flipCard} />
           </Animated.View>
         </View>
       </TouchableWithoutFeedback>
