@@ -42,7 +42,7 @@ const testingCard = () => {
         tension: 10,
         useNativeDriver: true,
       }).start();
-      console.log("a");
+      console.log(isFlipped);
     } else {
       Animated.spring(flipAnimation, {
         toValue: 180,
@@ -50,7 +50,7 @@ const testingCard = () => {
         tension: 10,
         useNativeDriver: true,
       }).start();
-      console.log("b");
+      console.log(isFlipped);
     }
     setIsFlipped(!isFlipped);
   };
@@ -58,10 +58,24 @@ const testingCard = () => {
     <View style={styles.container}>
       <TouchableWithoutFeedback>
         <View style={styles.cardContainer}>
-          <Animated.View style={[styles.front, styles.card, flipToFrontStyle]}>
+          <Animated.View
+            style={[
+              styles.front,
+              styles.card,
+              flipToFrontStyle,
+              { zIndex: isFlipped ? 0 : 1 }, // ensures front is clickable when not flipped
+            ]}
+          >
             <CardFront onPressFlip={flipCard} />
           </Animated.View>
-          <Animated.View style={[styles.back, styles.card, flipToBackStyle]}>
+          <Animated.View
+            style={[
+              styles.back,
+              styles.card,
+              flipToBackStyle,
+              { zIndex: isFlipped ? 1 : 0 }, // ensures back is clickable when flipped
+            ]}
+          >
             <CardBack onPressFlip={flipCard} />
           </Animated.View>
         </View>
