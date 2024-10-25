@@ -1,17 +1,40 @@
 import {
   Dimensions,
   StyleSheet,
-  Text,
   TouchableWithoutFeedback,
   View,
   Animated,
-  Button,
 } from "react-native";
 import React, { useRef, useState } from "react";
-import CardFront from "./Cards/cardFront";
-import CardBack from "./Cards/cardBack";
+import CardFront from "./Cards/cardFrontSide";
+import CardBack from "./Cards/cardBackSide";
 
-const testingCard = () => {
+interface CardProps {
+  // For Card Back Side Component
+  url: string;
+
+  // For Card Front Side Component
+  id: number;
+  status: "Required" | "HighPriority" | "Critical";
+  label: string;
+  quantity: number;
+  description: string;
+  addedBy: string;
+  dueDate: Date;
+  location: string;
+}
+
+const testingCard: React.FC<CardProps> = ({
+  url,
+  id,
+  status,
+  label,
+  quantity,
+  description,
+  addedBy,
+  dueDate,
+  location,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flipAnimation = useRef(new Animated.Value(0)).current;
@@ -66,7 +89,17 @@ const testingCard = () => {
               { zIndex: isFlipped ? 0 : 1 }, // ensures front is clickable when not flipped
             ]}
           >
-            <CardFront onPressFlip={flipCard} />
+            <CardFront
+              onPressFlip={flipCard}
+              id={id}
+              status={status}
+              label={label}
+              quantity={quantity}
+              description={description}
+              addedBy={addedBy}
+              dueDate={dueDate}
+              location={location}
+            />
           </Animated.View>
           <Animated.View
             style={[
@@ -76,7 +109,7 @@ const testingCard = () => {
               { zIndex: isFlipped ? 1 : 0 }, // ensures back is clickable when flipped
             ]}
           >
-            <CardBack onPressFlip={flipCard} />
+            <CardBack onPressFlip={flipCard} url={url} />
           </Animated.View>
         </View>
       </TouchableWithoutFeedback>
