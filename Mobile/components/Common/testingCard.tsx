@@ -20,6 +20,7 @@ interface CardProps {
   quantity: number;
   description: string;
   addedBy: string;
+  addedDate: Date;
   dueDate: Date;
   location: string;
 }
@@ -32,6 +33,7 @@ const testingCard: React.FC<CardProps> = ({
   quantity,
   description,
   addedBy,
+  addedDate,
   dueDate,
   location,
 }) => {
@@ -99,6 +101,7 @@ const testingCard: React.FC<CardProps> = ({
               addedBy={addedBy}
               dueDate={dueDate}
               location={location}
+              addedDate={addedDate}
             />
           </Animated.View>
           <Animated.View
@@ -130,11 +133,9 @@ const styles = StyleSheet.create({
   },
   front: {
     minWidth: "100%",
-    backgroundColor: "teal",
   },
   back: {
     minWidth: "100%",
-    backgroundColor: "green",
   },
   card: {
     height: height / 4,
