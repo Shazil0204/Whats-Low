@@ -1,34 +1,27 @@
-// ButtonComponent.tsx
 import React from "react";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { TouchableOpacity } from "react-native";
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  ViewStyle,
+  TextStyle,
+} from "react-native";
 
-interface ButtonComponentProps {
+interface CustomButtonProps {
+  title: string;
   onPress: () => void; // Function to call when the button is pressed
+  buttonStyle?: ViewStyle; // Optional style for the button
+  titleStyle?: TextStyle; // Optional style for the title text
 }
-
-const ButtonComponent: React.FC<ButtonComponentProps> = ({ onPress }) => {
+const ButtonComponent: React.FC<CustomButtonProps> = ({
+  title,
+  onPress,
+  buttonStyle,
+  titleStyle,
+}) => {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        position: "absolute",
-        bottom: -1,
-        right: -1,
-        zIndex: 1,
-      }}
-    >
-      <Ionicons
-        name="thumbs-up-outline"
-        size={40}
-        color="black"
-        backgroundColor="#9BF272"
-        style={{
-          borderTopLeftRadius: 25,
-          borderBottomRightRadius: 25,
-          padding: 10,
-        }}
-      />
+    <TouchableOpacity style={[buttonStyle]} onPress={onPress}>
+      <Text style={[titleStyle]}>{title}</Text>
     </TouchableOpacity>
   );
 };
