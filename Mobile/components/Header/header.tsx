@@ -16,7 +16,8 @@ export default Header;
 
 const styles = StyleSheet.create({
   mainView: {
-    marginTop: 30,
+    backgroundColor: "#193940",
+    marginTop: 42,
     flexDirection: "row",
     justifyContent: "space-between",
   },
