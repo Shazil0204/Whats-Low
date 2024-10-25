@@ -1,47 +1,65 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { useState } from "react";
 
 interface StatusComponentProps {
   status: "Required" | "HighPriority" | "Critical";
 }
 
 const StatusComponent: React.FC<StatusComponentProps> = ({ status }) => {
+  const [useClicked, setUseClicked] = useState(false);
+
+  const handleClick = () => {
+    setUseClicked(!useClicked);
+  };
+
   let statusColor: string;
+  let textColor: string;
 
   switch (status) {
     case "Required":
       statusColor = "#8BC34A";
+      textColor = "#000";
       break;
     case "HighPriority":
       statusColor = "#FFC107";
+      textColor = "#000";
       break;
     case "Critical":
       statusColor = "#F44336";
+      textColor = "#fff";
       break;
     default:
       statusColor = "gray";
+      textColor = "#fff";
   }
 
   return (
-    <View
+    <TouchableOpacity
+      onPress={handleClick}
       style={{
-        position: "absolute",
         top: -2,
         right: -2,
         height: 30,
+        minWidth: 30,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         paddingHorizontal: 10,
-        borderTopLeftRadius: 25,
-        borderBottomLeftRadius: 25,
-        borderTopRightRadius: 25,
+        borderRadius: 25,
         backgroundColor: statusColor,
         borderWidth: 1,
       }}
     >
-      <Text style={{ textAlign: "center", color: "#fff" }}>{status}</Text>
-    </View>
+      <Text
+        style={{
+          textAlign: "center",
+          color: textColor,
+          fontSize: 20,
+        }}
+      >
+        {useClicked ? status : ""}
+      </Text>
+    </TouchableOpacity>
   );
 };
 
