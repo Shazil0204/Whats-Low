@@ -34,12 +34,13 @@ export default Logo;
 const styles = StyleSheet.create({
   logoText: {
     fontSize: 40,
-    color: "#444444",
-    padding: 20,
+    color: "#fff",
+    padding: 2,
+    paddingLeft: 10,
     fontFamily: "Caveat-Bold",
     transform: [{ rotate: "-5deg" }],
-    textShadowColor: "#bbbbbb",
-    textShadowRadius: 1,
+    textShadowColor: "#187272",
+    textShadowRadius: 10,
     textShadowOffset: {
       width: 2,
       height: 2,

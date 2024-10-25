@@ -11,11 +11,11 @@ const HeaderNavigationLink = () => {
       segments[1] === "team" ||
       segments[1] === "setting" ? (
         <Link href="/(tabs)/">
-          <Ionicons name="return-up-back-outline" size={60} color="#003366" />
+          <Ionicons name="return-up-back-outline" size={60} color="#fff" />
         </Link>
       ) : (
         <Link href="/(auth)/profile">
-          <Ionicons name="person-circle-outline" size={60} color="#003366" />
+          <Ionicons name="person-circle-outline" size={60} color="#fff" />
         </Link>
       )}
     </View>
@@ -26,7 +26,6 @@ export default HeaderNavigationLink;
 
 const styles = StyleSheet.create({
   mainView: {
-    paddingVertical: 20,
-    paddingHorizontal: 10,
+    padding: 2,
   },
 });
