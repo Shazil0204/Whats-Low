@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   content: {
     justifyContent: "space-between", // Ensures space between items
-    padding: 20,
+    padding: 10,
     paddingBottom: 150,
     gap: 20,
   },
