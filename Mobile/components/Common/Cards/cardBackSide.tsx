@@ -15,7 +15,8 @@ const CardBack: React.FC<BackSideComponent> = ({ onPressFlip, url }) => {
         backgroundColor: "#fff",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 10,
+        borderRadius: 25,
+        padding: 20,
       }}
     >
       <Image
@@ -25,8 +26,17 @@ const CardBack: React.FC<BackSideComponent> = ({ onPressFlip, url }) => {
           uri: url,
         }}
       />
-      <View style={{ position: "absolute", top: 0, zIndex: 0 }}>
-        <Button title="See Details" onPress={onPressFlip} />
+      <View
+        style={{
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          zIndex: 0,
+          borderBottomRightRadius: 25,
+          overflow: "hidden",
+        }}
+      >
+        <Button title="Back to Details" onPress={onPressFlip} />
       </View>
     </View>
   );
