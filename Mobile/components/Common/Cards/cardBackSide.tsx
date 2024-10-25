@@ -1,6 +1,11 @@
-import { Button, StyleSheet, Image, View } from "react-native";
-import React from "react";
-
+import {
+  Button,
+  StyleSheet,
+  Image,
+  View,
+  TouchableOpacity,
+} from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
 interface BackSideComponent {
   onPressFlip: () => void;
   url: string;
@@ -36,7 +41,14 @@ const CardBack: React.FC<BackSideComponent> = ({ onPressFlip, url }) => {
           overflow: "hidden",
         }}
       >
-        <Button title="Back to Details" onPress={onPressFlip} />
+        <TouchableOpacity
+          onPress={onPressFlip}
+          style={{
+            padding: 5,
+          }}
+        >
+          <Ionicons name="sync-outline" size={24} color="black" />
+        </TouchableOpacity>
       </View>
     </View>
   );
