@@ -6,11 +6,14 @@ import Header from "../../components/Header/header";
 
 const FrontTabLayout = () => {
   useEffect(() => {
-    StatusBar.setBarStyle("dark-content");
+    // Set the status bar style and background color
+    StatusBar.setBarStyle("light-content"); // Change to light for better contrast with dark background
+    StatusBar.setBackgroundColor("#193940"); // Set background color
   }, []);
 
   return (
     <View style={styles.mainView}>
+      <StatusBar translucent={false} />
       <Header />
       <Tabs
         screenOptions={{ headerShown: false }}
@@ -30,6 +33,5 @@ const styles = StyleSheet.create({
   mainView: {
     flex: 1,
     position: "relative", // Ensure absolute positioning works relative to this container
-    backgroundColor: "#eaeaea",
   },
 });
