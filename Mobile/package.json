@@ -4,7 +4,7 @@
   "main": "expo-router/entry",
   "scripts": {
     "app": "expo start --port 3719",
-    "andr": "expo start --android --port 8082",
+    "dev": "expo start",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
